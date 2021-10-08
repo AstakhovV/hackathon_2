@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./progress.scss";
+import './progress.scss'
 import PropTypes from "prop-types";
 
 const Progress = ({ num }) => {

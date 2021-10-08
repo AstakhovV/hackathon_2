@@ -1,0 +1,64 @@
+.progress {
+  overflow: visible !important;
+}
+.progress__select {
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  padding: 0 15px;
+}
+.item__wrap {
+  display: inline-block;
+  position: relative;
+}
+.item__input {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.item__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.item__input-span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.item__input-span-more-75 {
+  color: white;
+}
+.item__circle {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid grey;
+  position: relative;
+}
+.item__circle::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border-radius: 50%;
+  display: block;
+  background-color: white;
+  border: 1px solid grey;
+}
+.item__circle-span {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
+/*# sourceMappingURL=progress.css.map */
