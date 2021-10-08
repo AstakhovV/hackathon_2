@@ -1,9 +1,10 @@
 import React from 'react';
+import Progress from "../Components/Progress";
 
 const Home = () => {
     return (
         <div>
-            Home page
+            <Progress num={25}/>
         </div>
     );
 };
