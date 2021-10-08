@@ -4,14 +4,14 @@ import { useHistory } from "react-router";
 import Button from "./UI/Button";
 import { renderAge } from "../utils/helpers";
 
-const UserCard = ({ id, firstname, lastname, age, description, img }) => {
+const UserCard = ({ id, firstName, lastName, age, description, photo }) => {
     const history = useHistory();
     return (
-        <div className="card">
-            <img src={img} className="card-img-top" alt="person" />
+        <div className="card m-2">
+            <img src={photo} className="card-img-top" alt="person" />
             <div className="card-body">
                 <h5 className="card-title">
-                    {firstname} {lastname}
+                    {firstName} {lastName}
                 </h5>
                 <h6 className="card-subtitle text-muted mb-3">
                     {renderAge(age)}
@@ -33,12 +33,12 @@ const UserCard = ({ id, firstname, lastname, age, description, img }) => {
 };
 
 UserCard.propTypes = {
-    id: PropTypes.string.isRequired,
-    firstname: PropTypes.string.isRequired,
-    lastname: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
     age: PropTypes.number.isRequired,
     description: PropTypes.string,
-    img: PropTypes.string,
+    photo: PropTypes.string,
 };
 
 export default UserCard;

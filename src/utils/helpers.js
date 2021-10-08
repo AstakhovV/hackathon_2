@@ -1,9 +1,5 @@
-export const renderAge = age => {
-    if(age >= 5 && age <= 20) return `${age} лет`
-    const stringAge = String(age)
-    const lastSymb = Number(stringAge[stringAge.length - 1])
-    if(lastSymb === 1) return `${age} год`
-    if(lastSymb > 1 && lastSymb < 5) return `${age} года`
-    return `${age} лет`
+export const renderAge = n => {
+    const arr = ['год', 'года', 'лет']
+    return `${n} ${arr[(n % 100 > 4 && n % 100 < 20) ? 2
+        : [2, 0, 1, 1, 1, 2][(n % 10 < 5) ? n % 10 : 5]]}`;
 }
-
