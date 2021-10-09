@@ -1,12 +1,20 @@
-import React from 'react';
+import React from "react";
 import Progress from "../Components/Progress/Progress";
 
 const Home = () => {
-    return (
-        <div>
-            <Progress num={25}/>
-        </div>
-    );
+  const dataForProgressItems = {
+    "Заполненные данные разработчика:": 25,
+    HTML: 100,
+    CSS: 90,
+    JavaScript: 50,
+    React: 10,
+  };
+
+  return (
+    <div>
+      <Progress dataForProgressItems={dataForProgressItems} />
+    </div>
+  );
 };
 
 export default Home;
