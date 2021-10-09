@@ -1,5 +1,5 @@
 import React from 'react';
-import Progress from "../Components/Progress";
+import Progress from "../Components/Progress/Progress";
 
 const Home = () => {
     return (

@@ -1,14 +1,13 @@
 import React from 'react';
-import {useSelector} from "react-redux";
+import { useParams } from 'react-router';
+import UserPage from '../Components/UserPage';
 import UsersList from "../Components/UsersList";
 
 const Users = () => {
-    const data = useSelector(state => state.users)
+    const {userId} = useParams()
     return (
-        <div>
-            {
-                data && <UsersList users={data}/>
-            }
+        <div className="container pt-3">
+            {userId ? <UserPage userId={userId}/> : <UsersList/>}
         </div>
     );
 };

@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import Button from "./UI/Button";
 import { renderAge } from "../utils/helpers";
 
-const UserCard = ({ id, firstName, lastName, age, description, photo }) => {
+const UserCard = ({ id, firstName, lastName, age, about, photo }) => {
     const history = useHistory();
     return (
         <div className="card m-2">
@@ -16,7 +16,7 @@ const UserCard = ({ id, firstName, lastName, age, description, photo }) => {
                 <h6 className="card-subtitle text-muted mb-3">
                     {renderAge(age)}
                 </h6>
-                <p className="card-text">{description}</p>
+                <p className="card-text">{about}</p>
                 <div className="d-flex justify-content-between">
                     <Button outlined color="success">
                         В избранное
@@ -33,7 +33,7 @@ const UserCard = ({ id, firstName, lastName, age, description, photo }) => {
 };
 
 UserCard.propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     age: PropTypes.number.isRequired,
