@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import Button from "./UI/Button";
 import { renderAge } from "../utils/helpers";
 
-const UserCard = ({id, firstName, lastName, age, description, photo, onClick}) => {
+const UserCard = ({id, firstName, lastName, age, about, photo, onClick}) => {
     const history = useHistory();
     const [bookmark, setBookmark] = useState(!!localStorage.getItem(id))
     const onAddBookmark = () => {
@@ -15,7 +15,7 @@ const UserCard = ({id, firstName, lastName, age, description, photo, onClick}) =
                 firstName:firstName,
                 lastName: lastName,
                 age: age,
-                description: description,
+                about: about,
                 photo: photo
             }
             localStorage.setItem(id, JSON.stringify(storageObj))

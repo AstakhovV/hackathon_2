@@ -16,7 +16,7 @@ const UsersList = () => {
         <div className="row row-cols-3">
             {users.map((user) => (
                 <div className="col" key={user.id}>
-                    <UserCard {...user} {...rest}/>
+                    <UserCard {...user}/>
                 </div>
             ))}
         </div>
