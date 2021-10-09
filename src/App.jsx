@@ -1,6 +1,6 @@
 import React from "react";
 import AppRouter from "./Components/AppRouter";
-import NavBar from './Components/NavBar/NavBar'
+import NavBar from './Components/NavBar'
 
 function App() {
   return (
