@@ -9,18 +9,22 @@ const Button = ({
     type,
     onClick,
     children,
+    className,
+    style,
 }) => {
     const btnClasses = () => {
         const cls = ["btn"];
         if (size) cls.push(`btn-${size}`);
-        if (!isRounded) cls.push('rounded-0');
-        if(color) {
-            cls.push(`btn-${outlined ? "outline-" : ''}${color}`)
+        if (!isRounded) cls.push("rounded-0");
+        if (color) {
+            cls.push(`btn-${outlined ? "outline-" : ""}${color}`);
         }
-        return cls.join(' ')
+        if (className) cls.push(className);
+        return cls.join(" ");
     };
     return (
         <button
+            style={style}
             type={type || "button"}
             onClick={onClick}
             className={btnClasses()}>
@@ -32,14 +36,16 @@ const Button = ({
 Button.defaultProps = {
     isRounded: true,
     outlined: false,
-    onClick: () => {}
-}
+    onClick: () => {},
+};
 
 Button.propTypes = {
     color: PropTypes.string,
     outlined: PropTypes.bool,
     size: PropTypes.string,
     isRounded: PropTypes.bool,
+    className: PropTypes.string,
+    style: PropTypes.object,
     type: PropTypes.string,
     children: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
     onClick: PropTypes.func.isRequired,

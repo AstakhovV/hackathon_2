@@ -38,7 +38,7 @@ const UserCard = ({id, firstName, lastName, age, description, photo, onClick}) =
                 <h6 className="card-subtitle text-muted mb-3">
                     {renderAge(age)}
                 </h6>
-                <p className="card-text">{description}</p>
+                <p className="card-text">{about}</p>
                 <div className="d-flex justify-content-between">
                     {
                         bookmark
@@ -66,7 +66,7 @@ const UserCard = ({id, firstName, lastName, age, description, photo, onClick}) =
 };
 
 UserCard.propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     age: PropTypes.number.isRequired,

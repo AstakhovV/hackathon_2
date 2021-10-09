@@ -1,10 +1,19 @@
-import React from "react";
-import PropTypes from 'prop-types'
+import React, { useEffect, useState } from "react";
 import UserCard from "./UserCard";
+import API from '../api'
+import Loader from "./UI/Loader";
+const UsersList = () => {
+    const [users, setUsers] = useState()
 
-const UsersList = ({ users, ...rest }) => {
+    useEffect(() => {
+        API.users.fetchAll().then(users => setUsers(users))
+    }, [])
+
+    if(!users) {
+        return <Loader/>
+    }
     return (
-        <div className="row row-col-3">
+        <div className="row row-cols-3">
             {users.map((user) => (
                 <div className="col" key={user.id}>
                     <UserCard {...user} {...rest}/>
@@ -14,8 +23,5 @@ const UsersList = ({ users, ...rest }) => {
     );
 };
 
-UsersList.propTypes = {
-    users: PropTypes.array.isRequired
-}
 
 export default UsersList;
