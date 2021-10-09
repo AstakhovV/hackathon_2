@@ -12,12 +12,11 @@ const UsersList = () => {
     if(!users) {
         return <Loader/>
     }
-
     return (
         <div className="row row-cols-3">
             {users.map((user) => (
                 <div className="col" key={user.id}>
-                    <UserCard {...user} />
+                    <UserCard {...user} {...rest}/>
                 </div>
             ))}
         </div>
