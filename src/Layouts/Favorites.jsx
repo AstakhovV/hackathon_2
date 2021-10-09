@@ -1,23 +1,16 @@
-import React, {useState} from 'react';
+import React, { useContext } from "react";
 import UsersList from "../Components/UsersList";
+import { favoritesContext } from "../context/favorites/favoritesContext";
 
 const Favorites = () => {
-    const [data, setData] = useState(Object.values(Object.keys(localStorage).reduce(function (obj, str) {
-        obj[str] = JSON.parse(localStorage.getItem(str));
-        return obj
-    }, {})))
-    const handleRemove = (id) => {
-        const obj = data.filter(obj => obj.id !== id)
-        setData(obj)
-    }
+    const { favoriteUsers } = useContext(favoritesContext);
     return (
-        <div>
-            {
-                data.length
-                    ?
-                    <UsersList onClick={handleRemove} users={data}/>
-                    : <h3>Вы еще не добавили в избранное разработчиков</h3>
-            }
+        <div className="container pt-3">
+            {favoriteUsers.length ? (
+                <UsersList data={favoriteUsers} />
+            ) : (
+                <h3>Вы еще не добавили в избранное разработчиков</h3>
+            )}
         </div>
     );
 };

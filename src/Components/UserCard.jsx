@@ -1,33 +1,19 @@
-import React, {useState} from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { useHistory } from "react-router";
 import Button from "./UI/Button";
 import { renderAge } from "../utils/helpers";
+import { favoritesContext } from "../context/favorites/favoritesContext";
 
-const UserCard = ({id, firstName, lastName, age, about, photo, onClick}) => {
+const UserCard = ({ id, firstName, lastName, age, about, photo }) => {
     const history = useHistory();
-    const [bookmark, setBookmark] = useState(!!localStorage.getItem(id))
-    const onAddBookmark = () => {
-        if (!bookmark){
-            setBookmark(true)
-            const storageObj = {
-                id:id,
-                firstName:firstName,
-                lastName: lastName,
-                age: age,
-                about: about,
-                photo: photo
-            }
-            localStorage.setItem(id, JSON.stringify(storageObj))
-        } else {
-            localStorage.removeItem(id)
-            if(onClick){
-                onClick(id)
-            }
-            setBookmark(false)
-        }
-
-    }
+    const { favoriteUsers, addToFavorites, removeFromFavorites } =
+        useContext(favoritesContext);
+    const onAddToFavorites = () => {
+        const user = { id, firstName, lastName, age, about, photo };
+        addToFavorites(user);
+    };
+    const isFavorite = favoriteUsers.find((user) => user.id === id);
     return (
         <div className="card m-2">
             <img src={photo} className="card-img-top" alt="person" />
@@ -40,19 +26,21 @@ const UserCard = ({id, firstName, lastName, age, about, photo, onClick}) => {
                 </h6>
                 <p className="card-text">{about}</p>
                 <div className="d-flex justify-content-between">
-                    {
-                        bookmark
-                            ? <Button onClick={onAddBookmark}
-                                      color="danger">
-                                Убрать из избранного
-                            </Button>
-                            :
-                            <Button outlined
-                                    onClick={onAddBookmark}
-                                    color="success">
-                                В избранное
-                            </Button>
-                    }
+                    {isFavorite ? (
+                        <Button
+                            size="sm"
+                            color="danger"
+                            onClick={() => removeFromFavorites(id)}>
+                            Удалить из избранного
+                        </Button>
+                    ) : (
+                        <Button
+                            outlined
+                            color="success"
+                            onClick={onAddToFavorites}>
+                            В избранное
+                        </Button>
+                    )}
 
                     <Button
                         onClick={() => history.push("/users/" + id)}
