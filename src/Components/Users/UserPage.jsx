@@ -1,14 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import PropTypes from "prop-types"
 import API from "../../api";
 import Loader from "../UI/Loader";
 import Button from "../UI/Button";
 import Badge from "../UI/Badge";
-import { renderAge } from "../../utils/helpers";
+import {renderAge} from "../../utils/helpers";
 import Socials from "../Socials";
-import { favoritesContext } from "../../context/favorites/favoritesContext";
+import {favoritesContext} from "../../context/favorites/favoritesContext";
 import {GoBack} from "../../utils/GoBack";
 import Progress from "../Progress/Progress";
+import Slider from "../Slider/Slider";
+import Slide from "../Slider/Slide";
+import images from '../Slider/images';
+
 const UserPage = ({ userId }) => {
     const [user, setUser] = useState();
     const { favoriteUsers, addToFavorites, removeFromFavorites } =
@@ -50,7 +54,7 @@ const UserPage = ({ userId }) => {
                             size="sm"
                             className="text-white">
                             В избранном
-                            <i className="bi bi-bookmark-check" />
+                            <i className="bi bi-bookmark-check"/>
                         </Button>
                     ) : (
                         <Button
@@ -58,28 +62,38 @@ const UserPage = ({ userId }) => {
                             color="warning"
                             size="sm"
                             className="text-white">
-                            В избранное <i className="bi bi-bookmark-plus" />
+                            В избранное <i className="bi bi-bookmark-plus"/>
                         </Button>
                     )}
                     <GoBack/>
                 </div>
             </div>
-            <div className="row ">
-                <div className="col-4">
-                    <div className="rounded-1 shadow mb-4 overflow-hidden">
-                        <img src={photo} alt="user" className="mw-100" />
-                    </div>
+            <div className="row">
+                <div className="row mb-4">
+                    <div className="col-4">
+                        <div className="rounded-1 shadow mb-4 overflow-hidden">
+                            <img src={photo} alt="user" className="mw-100"/>
+                        </div>
 
-                </div>
-                <div className="col-4">
-                    <h5>О себе:</h5>
-                    <p>{about}</p>
-                    <h5>На проекте работал над:</h5>
-                    <p>{impact}</p>
-                    <Socials socials={socials} />
-                </div>
-                <div className="col-4">
-                    <Progress dataForProgressItems={skills}/>
+                    </div>
+                    <div className="col-4">
+                        <h5>О себе:</h5>
+                        <p>{about}</p>
+                        <h5>На проекте работал над:</h5>
+                        <p>{impact}</p>
+                        <Socials socials={socials}/>
+                    </div>
+                    <div className="col-4">
+                        <Progress dataForProgressItems={skills}/>
+                    </div>
+                    <h2 className="text-center mt-5">Мои работы: </h2>
+                    <Slider>
+                        <Slide><img src={images[0]} alt="tre"/></Slide>
+                        <Slide><img src={images[1]} alt="tre"/></Slide>
+                        <Slide><img src={images[2]} alt="tre"/></Slide>
+                        <Slide><img src={images[3]} alt="tre"/></Slide>
+                        <Slide><img src={images[4]} alt="tre"/></Slide>
+                    </Slider>
                 </div>
             </div>
         </>
