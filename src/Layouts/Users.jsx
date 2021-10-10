@@ -6,7 +6,7 @@ import UsersList from "../Components/UsersList";
 const Users = () => {
     const {userId} = useParams()
     return (
-        <div className="container-xl pt-3">
+        <div className="container-xl py-4">
             {userId ? <UserPage userId={userId}/> : <UsersList/>}
         </div>
     );
