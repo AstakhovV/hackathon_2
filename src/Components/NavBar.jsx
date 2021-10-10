@@ -4,7 +4,7 @@ import { links } from "../constants/links";
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg shadow navbar-dark bg-primary">
+        <nav className="navbar navbar-expand shadow navbar-dark bg-primary">
             <div className="container-fluid">
                 <ul className="navbar-nav">
                     {links.map((link) => (
