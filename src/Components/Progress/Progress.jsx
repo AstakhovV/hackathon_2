@@ -3,13 +3,13 @@ import "./progress.scss";
 import PropTypes from "prop-types";
 import ProgressItem from "./ProgressItem";
 
-const Progress = ({dataForProgressItems}) => {
+const Progress = ({ dataForProgressItems }) => {
   const [selectValueActive, setSelectValueActive] = useState("bar");
 
-  const changeSelect = ({target}) => {
-      target.value === 'bar'
-          ? setSelectValueActive("bar")
-          : setSelectValueActive("circle")
+  const changeSelect = ({ target }) => {
+    target.value === "bar"
+      ? setSelectValueActive("bar")
+      : setSelectValueActive("circle");
   };
 
   return (
@@ -24,7 +24,7 @@ const Progress = ({dataForProgressItems}) => {
           onChange={(e) => changeSelect(e)}
         >
           <option value="bar">Шкала</option>
-          <option value="circle">Круговая дигарамма</option>
+          <option value="circle">Круговая диaграмма</option>
         </select>
       </article>
       {dataForProgressItems.map((progressItem) => {

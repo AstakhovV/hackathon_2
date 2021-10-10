@@ -41,15 +41,15 @@ const users = [
         lastName: 'Симонов',
         age: 25,
         about: 'Привет, меня зовут Юрий. Занимаюсь в основном вёрсткой сайтов, но если приходят задачи по JavaScript, то тоже их выполняю. С React, можно сказать, познакомился на курсе Владилена.',
-        impact: 'Компоненты "Progress" и "Breadcrumbs"',
+        impact: 'Компоненты "Progress" и "Breadcrumbs", а также немного "поколдовал" над общей картинкой домашней страницы',
         socials: ['https://github.com/Yuri-Simonov'],
         photo: 'https://avatars.githubusercontent.com/u/80687042?v=4',
         skills: [
             {name: 'HTML5', progress: 95},
             {name: 'CSS3', progress: 90},
             {name: 'JavaScript(ES6+)', progress: 75},
-            {name: 'React', progress: 50},
-            {name: 'NodeJS', progress: 40}
+            {name: 'React', progress: 10},
+            {name: 'Photoshop', progress: 100}
         ],
         isTeamlead: false
     }
