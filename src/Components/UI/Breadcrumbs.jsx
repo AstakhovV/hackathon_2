@@ -5,6 +5,7 @@ const Breadcrumbs = ({ crumbs, selectedItem }) => {
   const isLast = (index) => {
     return index === crumbs.length - 1;
   };
+    console.log(crumbs)
   return (
         crumbs.length === 1 ? null :
             <nav className="row justify-content-center mt-2 ml-4">
