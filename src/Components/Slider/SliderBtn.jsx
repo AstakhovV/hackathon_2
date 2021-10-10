@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types'
+
 
 const SliderBtn = ({ onClick, direction }) => {
     return (
@@ -8,5 +10,8 @@ const SliderBtn = ({ onClick, direction }) => {
         />
     );
 };
-
+SliderBtn.propTypes = {
+    onClick: PropTypes.func.isRequired,
+    direction: PropTypes.string.isRequired
+} 
 export default SliderBtn;

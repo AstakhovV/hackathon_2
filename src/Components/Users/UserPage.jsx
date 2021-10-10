@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import API from "../../api";
 import Loader from "../UI/Loader";
 import Button from "../UI/Button";
@@ -7,8 +7,10 @@ import Badge from "../UI/Badge";
 import { renderAge } from "../../utils/helpers";
 import Socials from "../Socials";
 import { favoritesContext } from "../../context/favorites/favoritesContext";
-import {GoBack} from "../../utils/GoBack";
+import { GoBack } from "../../utils/GoBack";
 import Progress from "../Progress/Progress";
+import Slider from "../Slider/Slider";
+import Slide from "../Slider/Slide";
 const UserPage = ({ userId }) => {
     const [user, setUser] = useState();
     const { favoriteUsers, addToFavorites, removeFromFavorites } =
@@ -31,7 +33,14 @@ const UserPage = ({ userId }) => {
         socials,
         photo,
         isTeamlead,
+        portfolio,
     } = user;
+
+    const slides = portfolio.map((image) => (
+        <Slide key={image}>
+            <img src={image} alt="portfolio" />
+        </Slide>
+    ));
     return (
         <>
             <div className="row">
@@ -61,7 +70,7 @@ const UserPage = ({ userId }) => {
                             В избранное <i className="bi bi-bookmark-plus" />
                         </Button>
                     )}
-                    <GoBack/>
+                    <GoBack />
                 </div>
             </div>
             <div className="row ">
@@ -69,7 +78,6 @@ const UserPage = ({ userId }) => {
                     <div className="rounded-1 shadow mb-4 overflow-hidden">
                         <img src={photo} alt="user" className="mw-100" />
                     </div>
-
                 </div>
                 <div className="col-4">
                     <h5>О себе:</h5>
@@ -79,15 +87,17 @@ const UserPage = ({ userId }) => {
                     <Socials socials={socials} />
                 </div>
                 <div className="col-4">
-                    <Progress dataForProgressItems={skills}/>
+                    <Progress dataForProgressItems={skills} />
                 </div>
+                <h2 className="text-center my-4">Мои работы:</h2>
+                <Slider>{slides}</Slider>
             </div>
         </>
     );
 };
 
 UserPage.propTypes = {
-    userId: PropTypes.string.isRequired
-}
+    userId: PropTypes.string.isRequired,
+};
 
 export default UserPage;
