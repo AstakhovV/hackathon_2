@@ -14,6 +14,6 @@ const Home = () => {
         </NavLink>
       </div>
   );
-};
+}
 
 export default Home;
