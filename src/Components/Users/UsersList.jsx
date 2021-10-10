@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import UserCard from "./UserCard";
-import API from "../api";
-import Loader from "./UI/Loader";
+import API from "../../api";
+import Loader from "../UI/Loader";
 const UsersList = ({ data }) => {
     const [users, setUsers] = useState();
 

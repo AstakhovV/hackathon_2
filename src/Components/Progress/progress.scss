@@ -14,9 +14,6 @@
 		flex: 0 0 300px;
 	}
 
-	&__text {
-	}
-
 	&__select {
 		height: 30px;
 		width: 200px;
@@ -24,16 +21,8 @@
 		border: 1px solid grey;
 		padding: 0 15px;
 	}
-
-	&__inputs-range {
-	}
-
-	&__inputs-item {
-	}
 }
 .item {
-	&__name {
-	}
 	&__wrap {
 		display: inline-block;
 		position: relative;

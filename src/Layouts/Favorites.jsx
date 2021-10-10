@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import UsersList from "../Components/UsersList";
+import UsersList from "../Components/Users/UsersList";
 import { favoritesContext } from "../context/favorites/favoritesContext";
 import sadImage from "../assets/image/sad_dev.png"
 
@@ -10,12 +10,13 @@ const Favorites = () => {
             {favoriteUsers.length ? (
                 <UsersList data={favoriteUsers} />
             ) : (
-                <>
-                    <h3>Вы еще не добавили в избранное разработчиков</h3>
+                <div className='items__container'>
+                    <h3>Вы еще не добавили в избранное крутых разработчиков...</h3>
                     <img src={sadImage}
+                         className='items__container-img'
                          alt="Sad Developer"
                     />
-                </>
+                </div>
 
             )}
         </div>

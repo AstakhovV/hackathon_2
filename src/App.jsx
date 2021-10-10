@@ -25,7 +25,7 @@ export default withRouter(function App({ location }) {
       return item !== "";
     });
     setCrumbs(["Home", ...filterSplitPathname]);
-  }, [location.pathname]);
+  }, [location]);
 
   return (
     <>

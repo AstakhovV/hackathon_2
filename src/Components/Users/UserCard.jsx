@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { useHistory } from "react-router";
-import Button from "./UI/Button";
-import { renderAge } from "../utils/helpers";
-import { favoritesContext } from "../context/favorites/favoritesContext";
+import Button from "../UI/Button";
+import { renderAge } from "../../utils/helpers";
+import { favoritesContext } from "../../context/favorites/favoritesContext";
 
 const UserCard = ({ id, firstName, lastName, age, about, photo }) => {
     const history = useHistory();

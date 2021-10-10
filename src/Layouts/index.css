@@ -1,0 +1,26 @@
+body {
+  overflow-x: hidden;
+}
+
+.items__container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.items__container h3 {
+  text-align: center;
+}
+.items__container img {
+  margin-top: 20px;
+  max-width: 60%;
+}
+.items__container-img {
+  max-height: 300px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: none !important;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types"
-import API from "../api";
-import Loader from "./UI/Loader";
-import Button from "./UI/Button";
-import Badge from "./UI/Badge";
-import { renderAge } from "../utils/helpers";
-import Socials from "./Socials";
-import { favoritesContext } from "../context/favorites/favoritesContext";
-import {GoBack} from "../utils/GoBack";
-import Progress from "./Progress/Progress";
+import API from "../../api";
+import Loader from "../UI/Loader";
+import Button from "../UI/Button";
+import Badge from "../UI/Badge";
+import { renderAge } from "../../utils/helpers";
+import Socials from "../Socials";
+import { favoritesContext } from "../../context/favorites/favoritesContext";
+import {GoBack} from "../../utils/GoBack";
+import Progress from "../Progress/Progress";
 const UserPage = ({ userId }) => {
     const [user, setUser] = useState();
     const { favoriteUsers, addToFavorites, removeFromFavorites } =
@@ -64,7 +64,7 @@ const UserPage = ({ userId }) => {
                     <GoBack/>
                 </div>
             </div>
-            <div className="row">
+            <div className="row ">
                 <div className="col-4">
                     <div className="rounded-1 shadow mb-4 overflow-hidden">
                         <img src={photo} alt="user" className="mw-100" />

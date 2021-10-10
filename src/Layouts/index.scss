@@ -1,0 +1,25 @@
+body {
+  overflow-x: hidden;
+}
+
+.items__container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    text-align: center;
+  }
+
+  img {
+    margin-top: 20px;
+    max-width: 60%;
+  }
+  &-img{
+    max-height: 300px;
+  }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: none !important;
+}
