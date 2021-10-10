@@ -4,7 +4,7 @@ import API from "../../api";
 import Loader from "../UI/Loader";
 import Button from "../UI/Button";
 import Badge from "../UI/Badge";
-import { renderAge } from "../../utils/helpers";
+import {renderAge} from "../../utils/helpers";
 import Socials from "../Socials";
 import { favoritesContext } from "../../context/favorites/favoritesContext";
 import { GoBack } from "../../utils/GoBack";
@@ -59,7 +59,7 @@ const UserPage = ({ userId }) => {
                             size="sm"
                             className="text-white">
                             В избранном
-                            <i className="bi bi-bookmark-check" />
+                            <i className="bi bi-bookmark-check"/>
                         </Button>
                     ) : (
                         <Button
@@ -67,7 +67,7 @@ const UserPage = ({ userId }) => {
                             color="warning"
                             size="sm"
                             className="text-white">
-                            В избранное <i className="bi bi-bookmark-plus" />
+                            В избранное <i className="bi bi-bookmark-plus"/>
                         </Button>
                     )}
                     <GoBack />
