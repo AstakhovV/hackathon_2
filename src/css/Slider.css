@@ -47,7 +47,7 @@
   background-color: #fff;
 }
 .slider-btn.next {
-  background-image: url("../../assets/image/next.png");
+  background-image: url("../assets/image/next.png");
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 60%;
@@ -55,7 +55,7 @@
   right: 20px;
 }
 .slider-btn.prev {
-  background-image: url("../../assets/image/left-arrow.png");
+  background-image: url("../assets/image/left-arrow.png");
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 25%;

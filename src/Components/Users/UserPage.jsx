@@ -5,7 +5,7 @@ import Loader from "../UI/Loader";
 import Button from "../UI/Button";
 import Badge from "../UI/Badge";
 import {renderAge} from "../../utils/helpers";
-import Socials from "../Socials";
+import Socials from "../UI/Socials";
 import { favoritesContext } from "../../context/favorites/favoritesContext";
 import { GoBack } from "../../utils/GoBack";
 import Progress from "../Progress/Progress";

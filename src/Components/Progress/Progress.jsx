@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./progress.scss";
+import "../../css/progress.scss";
 import PropTypes from "prop-types";
 import ProgressItem from "./ProgressItem";
 

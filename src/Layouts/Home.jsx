@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Components/UI/Button";
 import {NavLink} from "react-router-dom";
 import mainImg from "../assets/image/main.png"
-import '../index.scss'
+import '../css/index.scss'
 
 const Home = () => {
 

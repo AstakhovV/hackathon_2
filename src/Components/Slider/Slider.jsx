@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types'
-import "./Slider.scss";
+import "../../css/Slider.scss";
 import SliderBtn from "./SliderBtn";
 import SliderBullets from "./SliderBullets";
 import Slide from "./Slide";

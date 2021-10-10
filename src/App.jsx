@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import AppRouter from "./Components/AppRouter";
+import AppRouter from "./Components/Route/AppRouter";
 import { withRouter } from "react-router-dom";
-import NavBar from "./Components/NavBar";
+import NavBar from "./Components/Route/NavBar";
 import Breadcrumbs from "./Components/UI/Breadcrumbs";
 
 export default withRouter(function App({ location }) {
