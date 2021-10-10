@@ -4,10 +4,13 @@ import App from './App.jsx';
 import "bootstrap/dist/css/bootstrap.css"
 import {BrowserRouter} from "react-router-dom";
 import FavoritesState from './context/favorites/favoritesState.jsx';
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter history={history}>
         <FavoritesState>
           <App />
         </FavoritesState>
