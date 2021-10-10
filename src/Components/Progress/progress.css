@@ -1,5 +1,17 @@
 .progress {
   overflow: visible !important;
+  display: flex !important;
+  justify-content: center;
+  flex-wrap: wrap !important;
+  text-align: center;
+  background-color: transparent !important;
+  gap: 10px;
+  padding-left: 20px;
+}
+.progress__choise-type {
+  text-align: left;
+  align-self: flex-start;
+  flex: 0 0 300px;
 }
 .progress__select {
   height: 30px;
@@ -24,7 +36,8 @@
 }
 .item__input-span {
   position: absolute;
-  top: 50%;
+  font-weight: bold;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -32,18 +45,17 @@
   color: white;
 }
 .item__circle {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   position: relative;
   border: 1px solid grey;
-  position: relative;
 }
 .item__circle::after {
   content: "";
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -59,6 +71,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=progress.css.map */

@@ -7,6 +7,8 @@ import Badge from "./UI/Badge";
 import { renderAge } from "../utils/helpers";
 import Socials from "./Socials";
 import { favoritesContext } from "../context/favorites/favoritesContext";
+import {GoBack} from "../utils/GoBack";
+import Progress from "./Progress/Progress";
 const UserPage = ({ userId }) => {
     const [user, setUser] = useState();
     const { favoriteUsers, addToFavorites, removeFromFavorites } =
@@ -25,6 +27,7 @@ const UserPage = ({ userId }) => {
         age,
         about,
         impact,
+        skills,
         socials,
         photo,
         isTeamlead,
@@ -58,6 +61,7 @@ const UserPage = ({ userId }) => {
                             В избранное <i className="bi bi-bookmark-plus" />
                         </Button>
                     )}
+                    <GoBack/>
                 </div>
             </div>
             <div className="row">
@@ -65,15 +69,17 @@ const UserPage = ({ userId }) => {
                     <div className="rounded-1 shadow mb-4 overflow-hidden">
                         <img src={photo} alt="user" className="mw-100" />
                     </div>
-                    {/* Отдельный компонент навыков */}
-                    <h5>Навыки:</h5>
+
                 </div>
-                <div className="col-6">
+                <div className="col-4">
                     <h5>О себе:</h5>
                     <p>{about}</p>
                     <h5>На проекте работал над:</h5>
                     <p>{impact}</p>
                     <Socials socials={socials} />
+                </div>
+                <div className="col-4">
+                    <Progress dataForProgressItems={skills}/>
                 </div>
             </div>
         </>

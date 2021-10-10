@@ -8,13 +8,13 @@ const users = [
         impact: 'Компоненты: Карточка участника, Список участников, Кнопка, Loader, AppRouter, Badge, Страница участника. Структура проекта, fake-api, мегадизайн страницы и карточки участника :D',
         socials: ['https://github.com/Dimetris-s', 'https://www.facebook.com/dim3t'],
         photo: 'https://i.ibb.co/LgwQ5Sv/IMG-0668.jpg',
-        skills: {
-            html: {name: 'HTML5', progress: 95},
-            css: {name: 'CSS3', progress: 90},
-            js: {name: 'JavaScript(ES6+)', progress: 75},
-            react: {name: 'React', progress: 50},
-            node: {name: 'NodeJS', progress: 40}
-        },
+        skills: [
+            {name: 'HTML5', progress: 95},
+            {name: 'CSS3', progress: 90},
+            {name: 'JavaScript(ES6+)', progress: 75},
+            {name: 'React', progress: 50},
+            {name: 'NodeJS', progress: 40}
+        ],
         isTeamlead: false
     },
     {
@@ -23,16 +23,16 @@ const users = [
         lastName: 'Астахов',
         age: 26,
         about: 'Приветствую! Меня зовут Влад. Недавно я переехал в Москву, так как бросил основную работу и ушел на front. Изучаю JavaScript, TypeScript, React',
-        impact: 'Архитектура, Роутинг, Редакс',
+        impact: 'Структура и общие правки проекта, роутинг, utils',
         socials: ['https://github.com/AstakhovV'],
         photo: 'https://i.ibb.co/rbkhH0b/photo-about.jpg',
-        skills: {
-            html: {name: 'HTML5', progress: 95},
-            css: {name: 'CSS3', progress: 90},
-            js: {name: 'JavaScript(ES6+)', progress: 75},
-            react: {name: 'React', progress: 50},
-            node: {name: 'NodeJS', progress: 40}
-        },
+        skills: [
+            {name: 'HTML5', progress: 100},
+            {name: 'CSS3', progress: 80},
+            {name: 'JavaScript(ES6+)', progress: 70},
+            {name: 'React', progress: 50},
+            {name: 'TypeScript', progress: 35}
+        ],
         isTeamlead: true
     },
     {
@@ -44,13 +44,13 @@ const users = [
         impact: 'Компоненты "Progress" и "Breadcrumbs"',
         socials: ['https://github.com/Yuri-Simonov'],
         photo: 'https://avatars.githubusercontent.com/u/80687042?v=4',
-        skills: {
-            html: {name: 'HTML5', progress: 95},
-            css: {name: 'CSS3', progress: 90},
-            js: {name: 'JavaScript(ES6+)', progress: 75},
-            react: {name: 'React', progress: 50},
-            node: {name: 'NodeJS', progress: 40}
-        },
+        skills: [
+            {name: 'HTML5', progress: 95},
+            {name: 'CSS3', progress: 90},
+            {name: 'JavaScript(ES6+)', progress: 75},
+            {name: 'React', progress: 50},
+            {name: 'NodeJS', progress: 40}
+        ],
         isTeamlead: false
     }
 ]
