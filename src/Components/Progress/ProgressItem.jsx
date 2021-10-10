@@ -6,15 +6,15 @@ const ProgressItem = ({ progressItem, selectValueActive }) => {
   let colorForInput;
   let num = progressItem.progress;
   if (num >= 0 && num < 25) {
-    colorForInput = "#A91D11";
+    colorForInput = "#dc3545";
   } else if (num >= 25 && num < 50) {
-    colorForInput = "#FFDC33";
+    colorForInput = "#ffc107";
   } else if (num >= 50 && num < 75) {
-    colorForInput = "#A8E4A0";
+    colorForInput = "#61c679";
   } else if (num >= 75 && num < 100) {
-    colorForInput = "#44944A";
+    colorForInput = "#28a745";
   } else {
-    colorForInput = "#4285B4";
+    colorForInput = "#0d6efd";
   }
 
   let infoStyle = selectValueActive === "bar"

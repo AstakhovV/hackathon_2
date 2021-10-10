@@ -34,7 +34,7 @@ const users = [
             {name: 'React', progress: 50},
             {name: 'TypeScript', progress: 35}
         ],
-        portfolio: ["https://i.ibb.co/kGZhztH/11.jpg", "https://i.ibb.co/4gnXqtG/12.jpg", "https://i.ibb.co/sQFSztx/13.jpg"],
+        portfolio: ["https://i.ibb.co/kGZhztH/11.jpg", "https://i.ibb.co/ZJh1Tyd/Screenshot-1.jpg", "https://i.ibb.co/sQFSztx/13.jpg"],
 
         isTeamlead: true
     },
