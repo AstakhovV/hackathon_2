@@ -1,6 +1,18 @@
 .progress {
 	overflow: visible !important;
+	display: flex !important;
+	justify-content: center;
+	flex-wrap: wrap !important;
+	text-align: center;
+	background-color: transparent !important;
+	margin-top: 240px;
+	gap: 20px;
+	padding-left: 20px;
+
 	&__choise-type {
+		text-align: left;
+		align-self: flex-start;
+		flex: 0 0 300px;
 	}
 
 	&__text {
@@ -40,7 +52,8 @@
 	}
 	&__input-span {
 		position: absolute;
-		top: 50%;
+		font-weight: bold;
+		top: 40%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		&-more-75 {
@@ -75,6 +88,8 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			color: black;
+			font-size: 20px;
+			font-weight: bold;
 		}
 	}
 }
