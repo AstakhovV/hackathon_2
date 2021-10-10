@@ -6,7 +6,7 @@ import sadImage from "../assets/image/sad_dev.png"
 const Favorites = () => {
     const { favoriteUsers } = useContext(favoritesContext);
     return (
-        <div className="container pt-3 ">
+        <div className="container pt-2">
             {favoriteUsers.length ? (
                 <UsersList data={favoriteUsers} />
             ) : (

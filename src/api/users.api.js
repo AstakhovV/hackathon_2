@@ -5,7 +5,7 @@ const users = [
         lastName: 'Мудрук',
         age: 23,
         about: 'Зовут Дмитрий, с города Одессы. Пишу на JavaScript около года, для создания пользовтельских интерфейсов использую ReactJS',
-        impact: 'Компоненты: Карточка участника, Список участников, Кнопка, Loader, AppRouter, Badge, Страница участника. Структура проекта, fake-api, мегадизайн страницы и карточки участника :D',
+        impact: 'Компоненты: UserCard, UserList, Button, Loader, AppRouter, Badge, Slider, UserPage. Структура проекта, fake-api, реализация добавления в избранное.',
         socials: ['https://github.com/Dimetris-s', 'https://www.facebook.com/dim3t'],
         photo: 'https://i.ibb.co/LgwQ5Sv/IMG-0668.jpg',
         skills: [
@@ -15,6 +15,7 @@ const users = [
             {name: 'React', progress: 50},
             {name: 'NodeJS', progress: 40}
         ],
+        portfolio: ["https://i.ibb.co/p36ssR1/1.jpg", "https://i.ibb.co/gjwkL0k/2.jpg", "https://i.ibb.co/pQ5cj6g/3.jpg", "https://i.ibb.co/K0tW6B6/4.jpg"],
         isTeamlead: false
     },
     {
@@ -33,6 +34,8 @@ const users = [
             {name: 'React', progress: 50},
             {name: 'TypeScript', progress: 35}
         ],
+        portfolio: ["https://i.ibb.co/kGZhztH/11.jpg", "https://i.ibb.co/4gnXqtG/12.jpg", "https://i.ibb.co/sQFSztx/13.jpg"],
+
         isTeamlead: true
     },
     {
@@ -51,6 +54,8 @@ const users = [
             {name: 'React', progress: 10},
             {name: 'Photoshop', progress: 100}
         ],
+        portfolio: ["https://i.ibb.co/TvyPvGF/1.png", "https://i.ibb.co/x89Rnk3/2.png", "https://i.ibb.co/xY7DnnM/3.png"],
+
         isTeamlead: false
     }
 ]

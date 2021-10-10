@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types'
 import "./Slider.scss";
 import SliderBtn from "./SliderBtn";
 import SliderBullets from "./SliderBullets";
@@ -40,11 +41,15 @@ const Slider = ({ children }) => {
             <SliderBtn onClick={nextSlide} direction="next" />
             <SliderBullets
                 onSlideChoose={chooseSlide}
-                itemsCount={5}
+                itemsCount={children.length}
                 activeIndex={activeIndex}
             />
         </div>
     );
 };
+
+Slider.propTypes = {
+    children: PropTypes.array
+}
 
 export default Slider;
