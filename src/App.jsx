@@ -10,10 +10,10 @@ export default withRouter(function App({ location }) {
   const selectedItem = (crumb) => {
     if (crumb === "Home") {
       setCrumbs(["Home"]);
-      window.location.href = "/";
+      window.location.href = "/hackathon_2/";
     } else {
       setCrumbs([...crumbs], crumb);
-      window.location.href = "/" + crumb;
+      window.location.href = "/hackathon_2/" + crumb;
     }
   };
 

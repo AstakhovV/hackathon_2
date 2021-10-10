@@ -10,7 +10,7 @@ const history = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter basename="/hackathon" history={history}>
+      <BrowserRouter basename="/hackathon_2" history={history}>
         <FavoritesState>
           <App />
         </FavoritesState>
